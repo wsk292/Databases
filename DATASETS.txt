@@ -1,0 +1,16 @@
+Description:
+
+Our dataset consists of employment statistics across various blue collar industries, 
+taken from the Bureau of Labor Statistics, from before 1990. The industries covered are manufacturing, mining and
+logging, transportation, warehousing, and other similar services. We can use this as a reference point for other
+modern data sets to identify trends/changes in mentioned industries over the past 30 years. 
+
+Dataset Links:
+
+https://public.enigma.com/datasets/ce-manufacturing-avg-weekly-hours-avg-weekly-earnings-avg-weekly-overtime-hours-pre-1990/ab05a492-2fbe-4b27-8b83-820616bc37ed
+
+https://public.enigma.com/datasets/ce-service-providing-trade-avg-weekly-hours-avg-weekly-earnings-pre-1990/6a68b550-0e95-4afe-9058-cac9603870d0
+
+https://public.enigma.com/datasets/ce-total-priv-goods-prod-mining-and-logging-construction-avg-weekly-hours-avg-weekly-earnings-pre-1990/25cfc39c-2280-4e42-865b-5196f7a05631
+
+https://public.enigma.com/datasets/ce-transportation-and-warehousing-utilities-avg-weekly-hours-avg-weekly-earnings-pre-1990/cc9c99d9-5237-4019-8cd7-614c4d19e26a
