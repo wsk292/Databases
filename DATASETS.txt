@@ -1,20 +1,15 @@
 Description:
 
-Our dataset consists of corporate registrations for the largest 4 states in the United States, California, New York,
-Florida, and Texas. These files contain the master data sets for each respective states registration records.
-They contain the name of the corporation, current status of the registered corporation (active, suspended, merged out, etc.),
-and other miscallaneous information. We hope to use this dataset to make connections with general economic trends
-in the United States, seeing as how these states are representative of more than 1/3 of the entire U.S. population.
-We can also compare this dataset to a political timeline in relation to legislation, changes in certain industries. etc.
+Our dataset consists of recent information regarding the three largest cryptocurrences, BitCoin, Etherium, and LiteCoin.
+The data is extremely recent, all from the year 2019, and is from the same source. The tables track highs, lows,
+volumes, and value in USD of given currencies, kept track of at an hourly rate. One of the tables is a larger
+file, consisting of crypto information of various currencies, taken at 12 hour intervals. The combination of these
+tables gives us a good, overall representation of the cryptocurrency market, enabling us to track fluctuations
+and establish general trends. We hope to tie in this data with another relavant economic dataset, perhaps stocks 
+or another large indicator of economy.
 
-Florida Corporate Registrations:
-https://public.enigma.com/datasets/florida-corporate-registrations-master-file/3bde8238-c3df-4a9c-bf33-886608ff185f
+BTC, LTC, and ETH tables:
+http://www.cryptodatadownload.com/index.html
 
-New York Corporate Registrations:
-https://public.enigma.com/datasets/new-york-corporate-registrations-active/f6cb6ee9-fcd9-4020-b972-d49a2185c8b3
-
-Texas Corporate Registrations:
-https://public.enigma.com/datasets/texas-corporate-registrations-master-file/801e43b1-27d8-4d71-888c-de3bc0253209
-
-California Corporate Registrations:
-https://public.enigma.com/datasets/california-corporate-registrations/613a3195-cc43-4614-8ce9-c19d77fc2327
+All Crypto Table:
+https://www.kaggle.com/idanerez/all-cryoto-data-every-12-hrs/version/2
