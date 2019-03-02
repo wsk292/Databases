@@ -1,0 +1,4 @@
+During milestone 4, the only formatting issue we encountered was changing the date column from a STRING 
+to a seperate DATE and TIME primitive. That issue was taken care of using Standard SQL. There are no other formatting issues
+in our dataset1. For the sake of this assignment, we will be adding a range column to our tables using Apache B.
+The range column will show the difference between the open and close value of the given cryptocurrency.
