@@ -18,7 +18,7 @@ class OpenCloseRangeFn(beam.DoFn):
     Volume_BTC = record.get('Volume_BTC')
     Volume_USD = record.get('Volume_USD')
     
-    #returns the range of change in value of the given cryptocurrency
+    #returns range from open to close
     return [(ID, int(Close) - int(Open))]
 
 # DoFn performs on each element in the input PCollection.
