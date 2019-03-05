@@ -17,7 +17,8 @@ class OpenCloseRangeFn(beam.DoFn):
     Close = record.get('Close')
     Volume_ETH = record.get('Volume_ETH')
     Volume_USD = record.get('Volume_USD')
-
+    
+    # returns range from open to close
     return [(ID, int(Close) - int(Open))]
 
 # DoFn performs on each element in the input PCollection.
@@ -39,7 +40,8 @@ opts = beam.pipeline.PipelineOptions(flags=[], **options)
 
 # Create a Pipeline using a local runner for execution.
 with beam.Pipeline('DirectRunner', options=opts) as p:
-
+    
+    # reads in data from the ETH BigQuery Table, limit of 1000
     query_results = p | 'Read from BigQuery' >> beam.io.Read(beam.io.BigQuerySource(
         query = 'SELECT * FROM crypto_market_data_transformed.ETH_1H_Split LIMIT 1000')
         )
@@ -60,9 +62,11 @@ with beam.Pipeline('DirectRunner', options=opts) as p:
     # make BQ records
     out_pcoll = range_pcoll | 'Make BQ Record' >> beam.ParDo(MakeRecordFn())
     
+    # sets new table name and schema
     qualified_table_name = PROJECT_ID + ':crypto_market_data_transformed.ETH_ID_range'
     table_schema = 'id:INTEGER,range:INTEGER'
     
+    # writes the table to BigQuery
     out_pcoll | 'Write to BigQuery' >> beam.io.Write(beam.io.BigQuerySink(qualified_table_name, 
                                                     schema=table_schema,  
                                                     create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED,
