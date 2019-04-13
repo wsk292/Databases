@@ -1,0 +1,52 @@
+Query 1
+
+Description - Create a table showing a rise in both coin A and stock B during a one day period.
+
+Transformation - We will have to transform the coin table into 24 hour values rather than 1 hour values in order to 
+compare to the stock table, subquery the listing of when the stock value rose, and query the listing of where the coin value rose. 
+
+
+Query 2
+
+Description - Create tables showing the monthly averages of each crypto and stock respectively.
+
+Transformation - We will have to average out the key values of each crypto/stock, grouping by month, and order them by date
+for visibility. 
+
+
+Query 3
+
+Description - Create tables showing time periods where cryptocurrency increased in value and stocks were dropping and value,
+or vice versa.
+
+Transformation - The coins/stocks will have to be categorized as either increasing or decreasing, one of the two values will 
+have to be subqueried and used as a point of comparison, and the two will finally be paired up, excluding times which don't
+match the criteria. 
+
+
+Query 4
+
+Description -  Create tables showing a decline in cryptocurrency A and an increase in stock B.
+
+Transformation - Similar to query 1, we'll have to transform the crypto table to 24 hour values, subquery the stock value,
+and compare the open/close values to see which dates match the criteria. 
+
+
+Query 5
+
+Description - Create tables showing which economic indicators coincide with periods of growth in cryptocurrency, but
+a drop in stocks.
+
+Transformation - Crypto values will have to, again, be converted to 24 hour values and must be paired up with 
+the respective timely economic indicator. Indicators showing significant coincidence, at least greater than the average,
+will be noted. Comparisons between open/close values will be the primary indicators of growth/loss for each coin/stock.
+
+
+Query 6
+
+Description - Create tables showing which economic indicators coincide with periods of decline in cryptocurrency, but
+an increase in stocks.
+
+Transformation - Similar to the above, but in reverse. This is expected to be more common than the results of query 5.
+
+Description - Create tabbles showing which economic indicators coincide with periods of 
