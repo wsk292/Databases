@@ -13,3 +13,19 @@ http://www.cryptodatadownload.com/index.html
 
 All Crypto Table:
 https://www.kaggle.com/idanerez/all-cryoto-data-every-12-hrs/version/2
+
+
+Dataset 2 Description:
+
+This second dataset consists of stock information regarding Apple, Amazon, and FaceBook stocks. It also contains a fairly large 
+economic calendar, which contains significant indicators of economic change, within it. The stock values are sources from Yahoo finance
+while the economic calendar is sourced from Socrataca. The stock tables are largely in line with cryptocurrency tables of dataset1,
+containing common indicators like open, close, high, low, values and a date. These values are recorded on a twenty four hour basis.
+The economic calendar indicates a wide variety of events, which induce economic change. These can be tied into the rising/falling of
+cryptocurrency/stocks to analyze trends and see if there's any correlation between the two.
+
+GAFA Stock Prices:
+https://www.kaggle.com/stexo92/gafa-stock-prices
+
+Economic Calendar:
+https://www.kaggle.com/crtatu/economic-calendar-20142018
