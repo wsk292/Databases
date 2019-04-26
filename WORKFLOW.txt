@@ -1,0 +1,24 @@
+Dataset 2 WorkFlow
+
+Tasks/Dependencies:
+
+Create_Amazon_Table		 	Dependencies: None
+Create_Apple_Table		 	Dependencies: None
+Create_FaceBook_Table		 	Dependencies: None
+
+Transform_Amazon_Table_Cleaned	 	Dependencies: Create_Amazon_Table
+Transform_Apple_Table_Cleaned	 	Dependencies: Create_Apple_Table
+Transform_FaceBook_Table_Cleaned 	Dependencies: Create_FaceBook_Table
+
+Create_Amazon_24HR_Table	 	Dependencies: Create_Amazon_Table_Cleaned
+Create_Apple_24HR_Table		 	Dependencies: Create_Apple_Table_Cleaned
+Create_FaceBook_24HR_Table	 	Dependencies: Create_FaceBook_Table_Cleaned
+
+Create_Amazon_Range_Table	 	Dependencies: Create_Amazon_Table_Cleaned
+Create_Apple_Range_Table	 	Dependencies: Create_Apple_Table_Cleaned
+CreateFaceBook_Range_Table	 	Dependencies: Create_FaceBook_Table_Cleaned
+
+Create_Amazon_Rise_Crypto_Drop_Table	Dependencies: Create_Amazon_24HR_Table, DataSet1 Transform
+Create_Apple_Rise_Crypto_Drop_Table	Dependencies: Create_Apple_24HR_Table, DataSet1 Transform
+Create_FaceBook_Rise_Crypto_Drop_Table	Dependencies: Create_FaceBook_24HR_Table, DataSet1 Transform
+
