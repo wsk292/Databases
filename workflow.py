@@ -16,52 +16,52 @@ sql_cmd_start = 'bq query --use_legacy_sql=false '
 
 sql_Amazon = 'create table ' + new_dataset + '.Amazon_Temp as select * ' \
            'from ' + raw_dataset + '.gafa_stock_prices ' \
-           'where Stock = 'Amazon' '
+           'where Stock = Amazon '
 
 sql_Apple = 'create table ' + new_dataset + '.Apple_Temp as ' \
             'select * ' \
             'from ' + raw_dataset + '.gafa_stock_prices ' \
-            'where Stock = 'Apple' '
+            'where Stock = Apple '
 
 sql_Facebook = 'create table ' + new_dataset + '.Facebook_Temp as ' \
             'select * ' \
             'from ' + raw_dataset + '.gafa_stock_prices ' \
-            'where Stock = 'Facebook' '
+            'where Stock = Facebook '
 
-sql_Amazon_Range = 'create table' + range_dataset + '.Amazon_Range_Temp as ' \
-                  'select Amazon.ID as ID, (Amazon.Open - Amazon.Close) as Range'
-                  'from ' + new_dataset '.Amazon'
+sql_Amazon_Range = 'create table ' + range_dataset + '.Amazon_Range_Temp as ' \
+                  'select Amazon.ID as ID, (Amazon.Open - Amazon.Close) as Range ' \
+                  'from ' + new_dataset + '.Amazon'
 
-sql_Apple_Range = 'create table' + range_dataset + '.Apple_Range_Temp as ' \
-                  'select Apple.ID as ID, (Apple.Open - Apple.Close) as Range'
-                  'from ' + new_dataset '.Apple'
+sql_Apple_Range = 'create table ' + range_dataset + '.Apple_Range_Temp as ' \
+                  'select Apple.ID as ID, (Apple.Open - Apple.Close) as Range ' \
+                  'from ' + new_dataset + '.Apple'
 
-sql_Facebook_Range = 'create table' + range_dataset + '.Facebook_Range_Temp as ' \
-                  'select Facebook.ID as ID, (Facebook.Open - Facebook.Close) as Range'
-                  'from ' + new_dataset '.Facebook'
+sql_Facebook_Range = 'create table ' + range_dataset + '.Facebook_Range_Temp as ' \
+                  'select Facebook.ID as ID, (Facebook.Open - Facebook.Close) as Range ' \
+                  'from ' + new_dataset + '.Facebook'
 
 sql_Amazon_Range_All = 'create table ' + new_dataset + '.Amazon_Range_All_Temp as ' \
                   'select Amazon.ID as ID, Amazon.Stock as Stock, Amazon.Date as Date, Amazon.Open as Open, Amazon.High as High, Amazon.Low as Low, ' \
                   'Amazon.Close as Close, Amazon.Volume as Volume, Amazon_Range.Range as Range ' \
-                  'from ' + new_dataset + '.Amazon as Amazon' \
-                  'join ' + range_dataset + '.Amazon_Range as Amazon_Range'
-                  'on Amazon.ID = Amazon_Range.ID'
+                  'from ' + new_dataset + '.Amazon as Amazon ' \
+                  'join ' + range_dataset + '.Amazon_Range as Amazon_Range ' \
+                  'on Amazon.ID = Amazon_Range.ID' \
                   'order by Amazon.ID'
 
 sql_Apple_Range_All = 'create table ' + new_dataset + '.Apple_Range_All_Temp as ' \
                   'select Apple.ID as ID, Apple.Stock as Stock, Apple.Date as Date, Apple.Open as Open, Apple.High as High, Apple.Low as Low, ' \
                   'Apple.Close as Close, Apple.Volume as Volume, Apple_Range.Range as Range ' \
-                  'from ' + new_dataset + '.Apple as Apple' \
-                  'join ' + range_dataset + '.Apple_Range as Apple_Range'
-                  'on Apple.ID = Apple_Range.ID'
+                  'from ' + new_dataset + '.Apple as Apple ' \
+                  'join ' + range_dataset + '.Apple_Range as Apple_Range ' \
+                  'on Apple.ID = Apple_Range.ID ' \
                   'order by Apple.ID'
 
 sql_Facebook_Range_All = 'create table ' + new_dataset + '.Facebook_Range_All_Temp as ' \
                   'select Facebook.ID as ID, Facebook.Stock as Stock, Facebook.Date as Date, Facebook.Open as Open, Facebook.High as High, Facebook.Low as Low, ' \
                   'Facebook.Close as Close, Facebook.Volume as Volume, Facebook_Range.Range as Range ' \
-                  'from ' + new_dataset + '.Facebook as Facebook' \
-                  'join ' + range_dataset + '.Facebook_Range as Facebook_Range'
-                  'on Facebook.ID = Facebook_Range.ID'
+                  'from ' + new_dataset + '.Facebook as Facebook ' \
+                  'join ' + range_dataset + '.Facebook_Range as Facebook_Range ' \
+                  'on Facebook.ID = Facebook_Range.ID ' \
                   'order by Facebook.ID'
 
 sql_Amazon_rise_crypto_drop = 'create table ' + range_dataset + '.Amazon_rise_crypto_drop as ' \
